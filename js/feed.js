@@ -5,7 +5,7 @@ $(document).ready(function() {
         type: "GET",
         url: "csv/courses.csv",
         dataType: "text",
-        success: function(data) {processData(data);}
+        success: console.log(data)
      });
 });
 
