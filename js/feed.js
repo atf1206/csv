@@ -8,7 +8,9 @@ $(document).ready(function() {
     })
     .done(function(result) {
         //processData(result);
-        var allTextLines = result.split(/\r\n|\n/);
+        var allTextLines = result.split("\n");
+        console.log(allTextLines);
+        var allTextLines = result.split(/\n/);
         console.log(allTextLines);
     });
 });
