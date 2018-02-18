@@ -7,32 +7,17 @@ $(document).ready(function() {
         dataType: "text",
     })
     .done(function(result) {
-        //processData(result);
-        var allTextLines = result.split("\n");
-        console.log(allTextLines);
-        var allTextLines = result.split(/\n/);
-        console.log(allTextLines);
+        processData(result.split("\n"));
     });
 });
 
-function processData(allText) {
-    console.log();
-    var allTextLines = allText.split(/\r\n|\n/);
-    var headers = allTextLines[0].split(',');
-    console.log(headers);
+function processData(lineArray) {
     var lines = [];
-
-    for (var i=1; i<allTextLines.length; i++) {
-        var data = allTextLines[i].split(',');
-        if (data.length == headers.length) {
-
-            var tarr = [];
-            for (var j=0; j<headers.length; j++) {
-                tarr.push(headers[j]+":"+data[j]);
-            }
-            lines.push(tarr);
-        }
-    }
+    for (var i=0, n=lineArray.length; i < n; i++){
+        if lineArray[i] {
+            lines.push(lineArray[i].split(","));
+        };
+    };
     console.log(lines);
 };
 
