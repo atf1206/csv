@@ -12,13 +12,17 @@ $(document).ready(function() {
 });
 
 function processData(lineArray) {
-    var lines = [];
+    var html = "";
     for (var i=0, n=lineArray.length; i < n; i++){
         if (lineArray[i]) {
-            lines.push(lineArray[i].split(","));
+            var line = lineArray[i].split(",");
+            html += "<a href='#'' rel='nofollow'><img src='graphics/cm.gif' border='0'></a>&nbsp;";
+            html += "<a href=" + line[1] + " rel='nofollow' class='bl'>" + line[0] + "</a><br>";
+            html += "<div class='divider'></div>";
         };
     };
     console.log(lines);
+    $(".coursescontent").append(html);
 };
 
 
@@ -113,26 +117,27 @@ function hackerAppend(sourceArray, post, j) {
 }
 
 function myGetNYTimes(sourceArray) {
-  var url = "https://api.nytimes.com/svc/topstories/v2/home.json";
-  url += '?' + $.param({
-    'api-key': "3b20fe86a1714372960f3048fe35b399",
-    'limitToFirst': 10
-  });
-  $.ajax({
-    url: url,
-    method: 'GET',
-    //dataType: 'jsonp'
-  })
-  .done(function(result) {
-    $("." +sourceArray[1]+ "content").empty();
-    for (var i = 0; i < sourceArray[2]; i++) {
-      //console.log(result["results"][i]["title"]);
-      $("." +sourceArray[1]+ "content").append("<a href='" +result["results"][i]["url"]+ "' rel='nofollow'><img src='graphics/cm.gif' border='0'></a>&nbsp; <a href='" +result["results"][i]["url"]+ "' rel='nofollow' class='bl'>" +result["results"][i]["title"]+ "</a><br>");
-      $("." +sourceArray[1]+ "content").append("<div class='divider'></div>");
-    }
-    $("." +sourceArray[1]+ "content").append("<div class='source'>&nbsp;More at&nbsp;<a href='" +sourceArray[2]+ "' rel='nofollow' class='asource'>" +sourceArray[3]+ "</a></div>");
-  })
-  .fail(function(err) {
-    throw err;
-  });
+    var url = "https://api.nytimes.com/svc/topstories/v2/home.json";
+    url += '?' + $.param({
+        'api-key': "3b20fe86a1714372960f3048fe35b399",
+        'limitToFirst': 10
+    });
+    $.ajax({
+        url: url,
+        method: 'GET',
+        //dataType: 'jsonp'
+    })
+    .done(function(result) {
+        $("." +sourceArray[1]+ "content").empty();
+        for (var i = 0; i < sourceArray[2]; i++) {
+            //console.log(result["results"][i]["title"]);
+            $("." +sourceArray[1]+ "content").append("<a href='" +result["results"][i]["url"]+ "' rel='nofollow'><img src='graphics/cm.gif' border='0'></a>&nbsp; <a href='" +result["results"][i]["url"]+ "' rel='nofollow' class='bl'>" +result["results"][i]["title"]+ "</a><br>");
+            $("." +sourceArray[1]+ "content").append("<div class='divider'></div>");
+        }
+        $("." +sourceArray[1]+ "content").append("<div class='source'>&nbsp;More at&nbsp;<a href='" +sourceArray[2]+ "' rel='nofollow' class='asource'>" +sourceArray[3]+ "</a></div>");
+    })
+    .fail(function(err) {
+        throw err;
+    });
 }
+
