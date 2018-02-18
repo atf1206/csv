@@ -14,7 +14,7 @@ $(document).ready(function() {
 function processData(lineArray) {
     var lines = [];
     for (var i=0, n=lineArray.length; i < n; i++){
-        if lineArray[i] {
+        if (lineArray[i]) {
             lines.push(lineArray[i].split(","));
         };
     };
