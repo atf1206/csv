@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<title>News Feed</title>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="js/feed.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/feed.css">
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="News Feed"> 
+
+</head>
+
+<body onload="myGetNYTimes(nytimes); myGetJSON(redditprogramming);">
+
+<div style="margin-top:20px;"></div>
+
+
+<div class="wrap" style="width:500px;">
+
+  <!-- Col 0 -->
+  <div style="margin:0 auto; width=500px;">
+
+  <!-- 0-1 -->
+  <div class="categ">
+    <span id="tn">Learning</span>
+    <ul class="tabs courses">
+      <li class="tab-link current" data-tab="Courses"><img src="graphics/ico-nyt.gif"></img>Classes</li>
+      <li class="tab-link" data-tab="Coursera"><img src="graphics/reddit.gif"></img>Coursera</li>
+      <li class="tab-link" data-tab="unknown"><img src="graphics/reddit.gif"></img>Classes 3</li>
+    </ul>
+  </div>
+
+  <div id="niceborder">
+    <div class="parsedcontent">
+
+      <div class="coursescontent coursestab tab-content current">
+        <a href="#" rel="nofollow"><img src="graphics/cm.gif" border="0"></a>&nbsp;
+        <a href="https://www.freecodecamp.org/" rel="nofollow" class="bl">Freecodecamp frontend react</a><br>
+        <div class="divider"></div>
+      </div>
+
+      <div class="courseracontent coursestab tab-content">
+        &nbsp;&nbsp;
+        <a href="http://www.dataquest.io/" rel="nofollow" class="bl">Dataquest</a><br>
+        <div class="divider"></div>
+        &nbsp;&nbsp;
+        <a href="http://bigdatauniversity.com/" rel="nofollow" class="bl">Big Data University</a><br>
+        <div class="divider"></div>
+      </div>
+
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+<!-- About -->
+<div class="about">
+  <div class="categ" style="font-size:15px;">
+    About
+  </div>
+</div>
+
+<div class="about">
+  <div id="niceborder">
+    <div class="parsedcontent">
+      <div class="aboutcontent tab-content current">
+        <div style="margin: 5px 30px 20px 30px;">
+          This website collects up-to-date feeds from various news sites (mostly from Reddit.com for now). Feeds are collected on-demand via JSON entirely on the client side. <br><br>
+          Created by Andrew Fritz, 2016-18
+        </div>
+      </div>    
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+  
+  
