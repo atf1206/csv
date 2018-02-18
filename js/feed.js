@@ -21,7 +21,7 @@ function processData(lineArray) {
             html += "<div class='divider'></div>";
         };
     };
-    console.log(lines);
+    console.log(line array);
     $(".coursescontent").append(html);
 };
 
