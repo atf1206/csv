@@ -7,7 +7,9 @@ $(document).ready(function() {
         dataType: "text",
     })
     .done(function(result) {
-        processData(result);
+        //processData(result);
+        var allTextLines = result.split(/\r\n|\n/);
+        console.log(allTextLines);
     });
 });
 
