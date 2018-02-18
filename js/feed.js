@@ -7,7 +7,7 @@ $(document).ready(function() {
         dataType: "text",
     })
     .done(function(result) {
-        console.log(result);
+        processData(result);
     });
 });
 
@@ -27,7 +27,7 @@ function processData(allText) {
             lines.push(tarr);
         }
     }
-    alert(lines);
+    console.log(lines);
 };
 
 
@@ -47,6 +47,8 @@ var reddittech = new Array('reddittech', 'news', 8, 'https://www.reddit.com/r/te
 
 $(document).ready(function () {
 	$('ul.tabs li').click(function() {
+
+        //Get 'data-tab' value of clicked tab
 		var tab_id = $(this).attr('data-tab');
 		tab_id = window[tab_id];
 
@@ -58,10 +60,10 @@ $(document).ready(function () {
 			$("."+tab_id[0]).addClass('current');
 		}
     
-    else if (tab_id[1] == "courses") {
-      $('.coursestab').removeClass('current');
-      $("."+tab_id[0]).addClass('current');
-    }
+        else if (tab_id[1] == "courses") {
+            $('.coursestab').removeClass('current');
+            $("."+tab_id[0]).addClass('current');
+        }
 
 		else if (tab_id[1] == "jobs") {
 			//$('.jobtab').removeClass('current');
