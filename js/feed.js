@@ -5,8 +5,10 @@ $(document).ready(function() {
         type: "GET",
         url: "csv/courses.csv",
         dataType: "text",
-        success: console.log(data)
-     });
+    })
+    .done(function(result) {
+        console.log(result);
+    });
 });
 
 function processData(allText) {
