@@ -34,14 +34,8 @@ ul.tabs li.current {
     height:18px;top:2px;
     /*background: #040404;*/
 }
-.tab-content{
-	display: none;
-	/* background: #ededed;
-	padding: 15px; */
-}
-.tab-content.current{
-	display: inherit;
-}
+.tab-content{display: none;}
+.tab-content.current{display: inherit;}
 
 a{color:#3366FF;background-color:inherit;text-decoration:none;}
 a:hover{color:#3399FF;background-color:inherit;}
