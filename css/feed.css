@@ -41,8 +41,8 @@ a.asource{color:#000088;font:small Arial;font-size:13px;padding-left:1px;}
 a.asource:hover{color:#1122FF;border-bottom:1px solid #888;}
 a.bl{color:#000088;font:small Arial;font-size:13px;padding-left:14px;line-height:17px;}
 a.bl:link{background:url(list.gif) no-repeat 0px 5px}
-a.bl:visited{background:url(list_checked.gif) no-repeat 0px 3px;}
-a.bl:hover{color:#1122FF;background:url(list_hover.gif) no-repeat 0px 3px;border-bottom:1px solid #888;}
+a.bl:visited{background:url(graphics/list_checked.gif) no-repeat 0px 3px;}
+a.bl:hover{color:#1122FF;background:url(graphics/list_hover.gif) no-repeat 0px 3px;border-bottom:1px solid #888;}
 
 #tabs {
     float:left;
