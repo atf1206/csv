@@ -83,7 +83,7 @@ function myGetJSON(sourceArray) {
                     hackerAppend(sourceArray, post, j);
                     j += 1;
                 });
-            };
+            }
         );
     };
     else {
