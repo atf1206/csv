@@ -26,6 +26,8 @@ ul.tabs li {
 }
 ul.tabs li.current {
     color:#000;background:#FFF;
+    display:inline;position:relative;
+    margin:0px;margin-left:5px;padding:0px 5px 0px 5px;
     border:1px solid #dbdadf;border-bottom:1px solid #FFF;
     height:18px;top:2px;
     /*background: #040404;*/
@@ -85,7 +87,7 @@ a.bl:hover{color:#1122FF;background:url(list_hover.gif) no-repeat 0px 3px;border
     border-bottom:1px solid #7aa5d6;
 }
 .parsedcontent{clear:both;margin:5px;margin-top:0px;padding-top:10px}
-.divider{height:1px;width:94%;padding:8px;margin:0px;background:#c5d7ef;font-size:1px;}
+.divider{height:1px;width:94%;padding:0 8px;margin:0px;background:#c5d7ef;font-size:1px;}
 .source{color:#101020;font:small Arial;font-size:13px;padding-top:6px;padding-left:32px;}
 
 /* #tabs ul.sidemenu{list-style:none;text-align:left;margin:0px 0px 7px 10px;padding:0;text-decoration:none;}
