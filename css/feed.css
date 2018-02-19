@@ -26,8 +26,8 @@ ul.tabs li {
 }
 ul.tabs li.current {
     color:#000;background:#FFF;
-    display:inline;position:relative;
-    margin:0px;margin-left:5px;padding:0px 5px 0px 5px;
+    margin:0px;margin-left:5px;
+    padding:0px 5px 0px 5px;
     border:1px solid #dbdadf;border-bottom:1px solid #FFF;
     height:18px;top:2px;
     /*background: #040404;*/

@@ -27,15 +27,15 @@ function processCSV(lineArray) {
 
 
 // 0-1
-var Courses = new Array('coursescontent', 'courses', '', '');
-var Coursera = new Array('courseracontent', 'courses', '', '');
-var unknown = new Array('unknown', 'courses', '', '');
+var Courses     = ['coursescontent',  'courses', '', '' ];
+var Coursera    = ['courseracontent', 'courses', '', '' ];
+var unknown     = ['unknown',         'courses', '', '' ];
 // 1-1
-var nytimes = new Array('nytimes', 'news', 10, 'http://www.nytimes.com', 'NYTimes.com');
-var reddit = new Array('reddit', "news", 10, 'https://www.reddit.com/', 'Reddit.com');
-var reddittop = new Array('reddittop', 'news', 8, 'https://www.reddit.com/top', 'Reddit.com/r/top');
-var redditworld = new Array('redditworld', 'news', 8, 'https://www.reddit.com/r/worldnews/', 'Reddit.com/r/worldnews');
-var reddittech = new Array('reddittech', 'news', 8, 'https://www.reddit.com/r/technology/', 'Reddit.com/r/tech');
+var nytimes     = new Array('nytimes',     'news', 10, 'http://www.nytimes.com',               'NYTimes.com'            );
+var reddit      = new Array('reddit',      'news', 10, 'https://www.reddit.com/',              'Reddit.com'             );
+var reddittop   = new Array('reddittop',   'news', 8,  'https://www.reddit.com/top',           'Reddit.com/r/top'       );
+var redditworld = new Array('redditworld', 'news', 8,  'https://www.reddit.com/r/worldnews/',  'Reddit.com/r/worldnews' );
+var reddittech  = new Array('reddittech',  'news', 8,  'https://www.reddit.com/r/technology/', 'Reddit.com/r/tech'      );
 // 1-2
 
 
