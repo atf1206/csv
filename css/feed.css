@@ -79,6 +79,7 @@ a.bl:hover{color:#1122FF;background:url(list_hover.gif) no-repeat 0px 3px;border
     margin:0 auto;
     padding:0;
     width:1020px;
+    border:1px solid black;
 }
 .categ {
     font-family:tahoma,Arial;font-weight:bold;
