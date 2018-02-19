@@ -97,7 +97,7 @@ function myGetJSON(sourceArray) {
                     $("." +sourceArray[1]+ "content").append("<div class='divider'></div>");
                 });
                 $("." +sourceArray[1]+ "content").append("<div class='source'>&nbsp;More at&nbsp;<a href='" +sourceArray[3]+ "' rel='nofollow' class='asource'>" +sourceArray[4]+ "</a></div>");
-            };
+            }
         );
     };
 };
@@ -111,7 +111,7 @@ function hackerAppend(sourceArray, post, j) {
             if (j == sourceArray[2]) {
                 $("." +sourceArray[1]+ "content").append("<div class='source'>&nbsp;More at&nbsp;<a href='" +sourceArray[4]+ "' rel='nofollow' class='asource'>" +sourceArray[5]+ "</a></div>");
             };
-        };
+        }
     );
 };
 
