@@ -85,7 +85,7 @@ function myGetJSON(sourceArray) {
                 });
             }
         );
-    };
+    }
     else {
         $.getJSON(
             sourceArray[3] + ".json?limitToFirst=5", //jsonp=?
