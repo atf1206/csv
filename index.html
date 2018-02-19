@@ -2,17 +2,12 @@
 <html lang="en">
 
 <head>
-
 <title>News Feed</title>
-
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script src="js/feed.js"></script>
-
 <link rel="stylesheet" type="text/css" href="css/feed.css">
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="description" content="News Feed"> 
-
 </head>
 
 <body onload="">
@@ -23,7 +18,7 @@
 <div class="wrap" style="margin:0 auto; width:500px;">
 
   <!-- Tabs -->
-  <div class="categ">
+  <div class="categories">
     <span id="tn">Courses</span>
     <ul class="tabs courses">
       <li class="tab-link current" data-tab="Courses"><img src="graphics/ico-nyt.gif"></img>Classes</li>
@@ -35,7 +30,7 @@
   <div class="parsedcontent niceborder">
     <div class="coursescontent coursestab tab-content current"></div>
     <div class="courseracontent coursestab tab-content">
-      <!-- keep for now -->
+      <!-- Pre-filled content - keep for now -->
       &nbsp;&nbsp;<a href="http://www.dataquest.io/" rel="nofollow" class="bl">Dataquest</a><br>
       <div class="divider"></div>
       &nbsp;&nbsp;<a href="http://bigdatauniversity.com/" rel="nofollow" class="bl">Big Data University</a><br>
@@ -44,6 +39,73 @@
   </div>
 
 </div>
+
+
+<div class="wrap">
+
+<!-- LEFT COLUMN ===================================== -->
+
+<div class="column">
+  
+  <!-- Box 1-1 - news -->
+  <!-- Tabs -->
+  <div class="categories">
+    <span id="tn">News</span>
+    <ul class="tabs news">
+      <li class="tab-link current" data-tab="nytimes"><img src="graphics/ico-nyt.gif"></img>NY Times</li>
+      <li class="tab-link" data-tab="reddit"><img src="graphics/reddit.gif"></img>Reddit</li>
+      <li class="tab-link" data-tab="reddittop"><img src="graphics/reddit.gif"></img>Top</li>
+      <li class="tab-link" data-tab="redditworld"><img src="graphics/reddit.gif"></img>World</li>
+      <li class="tab-link" data-tab="reddittech"><img src="graphics/reddit.gif"></img>Tech</li>
+    </ul>
+  </div>
+  <!-- Content -->
+  <div class="parsedcontent niceborder">    
+    <div class="newscontent tab-content current">
+      <a href="#" rel="nofollow"><img src="graphics/cm.gif" border="0"></a>&nbsp;
+      <a href="#" rel="nofollow" class="bl">text</a><br>
+      <div class="divider"></div> 
+    </div>
+  </div>
+
+  <!-- Box 1-2 - code -->
+  <!-- Tabs -->
+  <div class="categories">
+    <span id="tn">Code</span>
+    <ul class="tabs code">
+      <li class="tab-link current" data-tab="redditprogramming"><img src="graphics/reddit.gif"></img>Programming</li>
+      <li class="tab-link" data-tab="redditwebdev"><img src="graphics/reddit.gif"></img>WebDev</li>
+      <li class="tab-link" data-tab="hackernews">Hacker News</li>
+      <li class="tab-link" data-tab="redditcoding"><img src="graphics/reddit.gif"></img>Coding</li>
+    </ul>
+  </div>
+  <!-- Content -->
+  <div id="codecontent" class="parsedcontent niceborder">
+    <div class="codecontent tab-content current">
+      <div class="divider"></div>
+    </div>
+  </div>
+
+  <!-- Box 1-3 - science -->
+  <!-- Tabs -->
+  <div class="categories">
+    <span id="tn">Science</span>
+    <ul class="tabs science">
+      <li class="tab-link current" data-tab="redditscience"><img src="graphics/reddit.gif"></img>Reddit</li>
+      <li class="tab-link" data-tab="newscientist">New Scientist</li>
+    </ul>
+  </div>
+  <!-- Content -->
+  <div id="sciencecontent" class="parsedcontent niceborder">
+    <div class="sciencecontent tab-content current">
+      <div class="divider"></div>
+    </div>
+  </div>
+
+<!-- end Col 1 -->
+</div>
+
+<!-- RIGHT COLUMN ==================================== -->
 
 
 <!-- About -->

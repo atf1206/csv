@@ -44,7 +44,7 @@ a.bl:link{background:url(list.gif) no-repeat 0px 5px}
 a.bl:visited{background:url(graphics/list_checked.gif) no-repeat 0px 3px;}
 a.bl:hover{color:#1122FF;background:url(graphics/list_hover.gif) no-repeat 0px 3px;border-bottom:1px solid #888;}
 
-#tabs {
+.column {
     float:left;
     width:490px;
     margin:10px 5px 0px 10px;
@@ -81,7 +81,7 @@ a.bl:hover{color:#1122FF;background:url(graphics/list_hover.gif) no-repeat 0px 3
     width:1020px;
     border:1px solid black;
 }
-.categ {
+.categories {
     font-family:tahoma,Arial;font-weight:bold;
     margin:0px;margin-left:5px;
     padding:0px;

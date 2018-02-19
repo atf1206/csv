@@ -21,21 +21,21 @@ function processCSV(lineArray) {
             html += "<div class='divider'></div>";
         };
     };
-    console.log(lineArray);
+    //console.log(lineArray);
     $(".coursescontent").append(html);
 };
 
-// 0-1
+// Box 0 - courses from csv
 var Courses     = ['coursescontent',  'courses', '', '' ];
 var Coursera    = ['courseracontent', 'courses', '', '' ];
 var unknown     = ['unknown',         'courses', '', '' ];
-// 1-1
+// Box 1-1 - news
 var nytimes     = ['nytimes',     'news', 10, 'http://www.nytimes.com',               'NYTimes.com'            ];
 var reddit      = ['reddit',      'news', 10, 'https://www.reddit.com/',              'Reddit.com'             ];
 var reddittop   = ['reddittop',   'news', 8,  'https://www.reddit.com/top',           'Reddit.com/r/top'       ];
 var redditworld = ['redditworld', 'news', 8,  'https://www.reddit.com/r/worldnews/',  'Reddit.com/r/worldnews' ];
 var reddittech  = ['reddittech',  'news', 8,  'https://www.reddit.com/r/technology/', 'Reddit.com/r/tech'      ];
-// 1-2
+// Box 1-2
 
 
 $(document).ready(function () {
