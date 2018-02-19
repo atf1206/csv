@@ -70,7 +70,7 @@ a.bl:hover{color:#1122FF;background:url(list_hover.gif) no-repeat 0px 3px;border
     margin-right:10px;
     float:left;
 }
-#niceborder{
+.niceborder{
     border-radius:8px;-moz-border-radius:8px;-webkit-border-radius:8px;
     margin:0px 0px 26px 0px;
     border:1px solid #cfcfcf; border-top:none;
@@ -78,10 +78,10 @@ a.bl:hover{color:#1122FF;background:url(list_hover.gif) no-repeat 0px 3px;border
 }
 .about {
     width:600px;
-    margin-left:210px; padding:0;
+    margin:0 auto;
     text-align:center;
-    background:#FFF;
-    clear: both;
+    /*background:#FFF;*/
+    clear:both;
 }
 .wrap {
     margin:0 auto;
