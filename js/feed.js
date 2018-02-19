@@ -1,5 +1,5 @@
 
-// Gets latest courses makes HTML links
+// Gets latest courses & makes HTML links
 $(document).ready(function() {
     $.ajax({
         type: "GET",
