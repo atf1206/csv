@@ -16,7 +16,7 @@ function processCSV(lineArray) {
     for (var i=0, n=lineArray.length; i < n; i++){
         if (lineArray[i]) {
             var line = lineArray[i].split(",");
-            html += "<a href='#'' rel='nofollow'><img src='graphics/cm.gif' border='0'></a>&nbsp;";
+            html += "<a href='#'' rel='nofollow'><img src='graphics/cam.gif' border='0'></a>&nbsp;";
             html += "<a href='http://" + line[1] + "' rel='nofollow' class='bl'>" + line[0] + "</a><br>";
             html += "<div class='divider'></div>";
         };
