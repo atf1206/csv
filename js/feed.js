@@ -1,5 +1,5 @@
 
-
+// Gets latest courses makes HTML links
 $(document).ready(function() {
     $.ajax({
         type: "GET",
@@ -7,24 +7,23 @@ $(document).ready(function() {
         dataType: "text",
     })
     .done(function(result) {
-        processData(result.split("\n"));
+        processCSV(result.split("\n"));
     });
 });
 
-function processData(lineArray) {
+function processCSV(lineArray) {
     var html = "";
     for (var i=0, n=lineArray.length; i < n; i++){
         if (lineArray[i]) {
             var line = lineArray[i].split(",");
             html += "<a href='#'' rel='nofollow'><img src='graphics/cm.gif' border='0'></a>&nbsp;";
-            html += "<a href=" + line[1] + " rel='nofollow' class='bl'>" + line[0] + "</a><br>";
+            html += "<a href='http://" + line[1] + "' rel='nofollow' class='bl'>" + line[0] + "</a><br>";
             html += "<div class='divider'></div>";
         };
     };
     console.log(lineArray);
     $(".coursescontent").append(html);
 };
-
 
 
 // 0-1
