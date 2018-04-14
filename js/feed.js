@@ -26,9 +26,9 @@ function processCSV(lineArray) {
 };
 
 // Box 0 - courses from csv
-var Courses     = ['coursescontent',  'courses', '', '' ];
-var Coursera    = ['courseracontent', 'courses', '', '' ];
-var unknown     = ['unknown',         'courses', '', '' ];
+var Courses      = ['coursescontent',    'courses', '', '' ];
+var Coursera     = ['courseracontent',   'courses', '', '' ];
+var unknown      = ['unknown',           'courses', '', '' ];
 
 // Box 1-1 - news
 var nytimes      = ['nytimes',           'news', 10, 'http://www.nytimes.com',               'NYTimes.com'            ];
@@ -42,8 +42,8 @@ var redditwebdev = ['redditwebdev',      'code', 10, 'https://www.reddit.com/r/d
 var hackernews   = ['hackernews',        'code', 10, 'https://hacker-news.firebaseio.com/v0/topstories', 'https://hacker-news.firebaseio.com/v0/item/', 'http://news.ycombinator.com/', 'Hacker News'];
 var redditcoding = ['redditcoding',      'code', 10, 'https://www.reddit.com/r/coding/',      'Reddit.com/r/coding'      ];
 // Box 1-3 - science
-var redditscience = ['redditscience', 'science', 6, 'https://www.reddit.com/r/science/',   'Reddit.com/r/science'];
-var newscientist  = ['newscientist',  'science', 6, 'https://www.reddit.com/r/developer/', 'NewScientist.com'];
+var redditscience = ['redditscience',    'science', 6, 'https://www.reddit.com/r/science/',   'Reddit.com/r/science'];
+var newscientist  = ['newscientist',     'science', 6, 'https://www.reddit.com/r/developer/', 'NewScientist.com'];
 
 // Box 2-1 - learn
 var learncode        = ['learncode',        'learn', '', '' ];
