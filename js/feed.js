@@ -7,7 +7,8 @@ $(document).ready(function() {
         dataType: "text",
     })
     .done(function(result) {
-        processCSV(result.split("\n"));
+        var html = processCSV(result.split("\n"));
+        $(".coursescontent").append(html);
     });
 });
 
@@ -22,7 +23,7 @@ function processCSV(lineArray) {
         };
     };
     //console.log(lineArray);
-    $(".coursescontent").append(html);
+    return html
 };
 
 // Box 0 - courses from csv
