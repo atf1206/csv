@@ -72,6 +72,7 @@ $(document).ready(function () {
 		var tab_id = $(this).attr('data-tab');
 		tab_id = window[tab_id];
 
+        //Remove "current" class from all tabs in that box, add it back to just 1
 		$('ul.' +tab_id[1]+ ' li').removeClass('current');
 		$(this).addClass('current');
 		
@@ -90,9 +91,11 @@ $(document).ready(function () {
 			//$("."+tab_id[0]).addClass('current');
 			myGetIndeed(tab_id);
 		}
+
 		else if (tab_id[0] == "nytimes"){
 			myGetNYTimes(tab_id);
 		}
+        
 		else {
 			myGetJSON(tab_id);
 		}
