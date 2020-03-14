@@ -25,7 +25,7 @@ function processCSVConfig(csvContent) {
     lineArray = csvContent.split("\n")
     var config_dict = {};
     for (var i=0, n=lineArray.length; i < n; i++){
-        if (lineArray[i]) & (lineArray[i].substring(0,2) != "//") {
+        if (lineArray[i] && (lineArray[i].substring(0,2) != "//")) {
             var line = lineArray[i].split(",");
             config_dict[line[0]] = line.slice(1)
         };
