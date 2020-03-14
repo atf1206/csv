@@ -7,7 +7,7 @@ $(document).ready(function() {
         url: "csv/courses.csv",
         dataType: "text",
     })
-    .done(function(result) {
+    .done(function(res) {
         var html = processCSV(res);
         $(".coursescontent").append(html);
     });
@@ -19,8 +19,8 @@ $(document).ready(function() {
         url: "csv/boxes.csv",
         dataType: "text",
     })
-    .done(function(result) {
-        processCSVConfig(result)
+    .done(function(res) {
+        processCSVConfig(res)
     });
 });    
 
