@@ -34,7 +34,6 @@ function processCSVConfig(csvContent) {
             config_dict[line[0]] = line.slice(1)
         };
     };
-    //console.log(config_dict);
     config = config_dict
 };
 
@@ -59,7 +58,7 @@ $(document).ready(function () {
 
         //Get 'data-tab' value of clicked tab
 		var tab_id = $(this).attr('data-tab');
-		tab_id = window[tab_id];
+		tab_id = config[tab_id];
 
         //Remove "current" class from all tabs in that box, add it back to just 1
 		$('ul.' +tab_id[1]+ ' li').removeClass('current');
