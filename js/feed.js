@@ -68,22 +68,18 @@ $(document).ready(function () {
 			$('.learntab').removeClass('current');
 			$("."+tab_id[0]).addClass('current');
 		}
-    
         else if (tab_id[1] == "courses") {
             $('.coursestab').removeClass('current');
             $("."+tab_id[0]).addClass('current');
         }
-
 		else if (tab_id[1] == "jobs") {
 			//$('.jobtab').removeClass('current');
 			//$("."+tab_id[0]).addClass('current');
 			myGetIndeed(tab_id);
 		}
-
-		else if (tab_id[0] == "nytimes"){
+		else if (tab_id[0] == "nytimes") {
 			myGetNYTimes(tab_id);
 		}
-        
 		else {
 			myGetJSON(tab_id);
 		}
@@ -147,7 +143,6 @@ function myGetNYTimes(sourceArray) {
     .done(function(result) {
         $("." +sourceArray[1]+ "content").empty();
         for (var i = 0; i < sourceArray[2]; i++) {
-            //console.log(result["results"][i]["title"]);
             $("." +sourceArray[1]+ "content").append("<a href='" +result["results"][i]["url"]+ "' rel='nofollow'><img src='graphics/cam.gif' border='0'></a>&nbsp; <a href='" +result["results"][i]["url"]+ "' rel='nofollow' class='bl'>" +result["results"][i]["title"]+ "</a><br>");
             $("." +sourceArray[1]+ "content").append("<div class='divider'></div>");
         }
