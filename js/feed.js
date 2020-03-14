@@ -2,23 +2,27 @@
 var config = {}
 
 $(document).ready(function() {
-    var res = getCSV("csv/courses.csv");
-    var html = processCSV(res);
-    $(".coursescontent").append(html);
-    res = getCSV("csv/boxes.csv")
-    config = processCSVConfig(res)
-});
-
-function getCSV(relativeURL) {
     $.ajax({
         type: "GET",
-        url: relativeURL,
+        url: "csv/courses.csv",
         dataType: "text",
     })
     .done(function(result) {
-        return result
+        var html = processCSV(res);
+        $(".coursescontent").append(html);
     });
-}
+});
+
+$(document).ready(function() {
+    $.ajax({
+        type: "GET",
+        url: "csv/boxes.csv",
+        dataType: "text",
+    })
+    .done(function(result) {
+        processCSVConfig(result)
+    });
+});    
 
 
 function processCSVConfig(csvContent) {
@@ -31,7 +35,7 @@ function processCSVConfig(csvContent) {
         };
     };
     //console.log(config_dict);
-    return config_dict
+    config = config_dict
 };
 
 
