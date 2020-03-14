@@ -20,7 +20,12 @@ $(document).ready(function() {
         dataType: "text",
     })
     .done(function(res) {
-        processCSVConfig(res)
+        processCSVConfig(res);
+        myGetNYTimes(config["nytimes"]);
+        myGetIndeed(config["indeed1"]);
+        myGetJSON(config["redditprog"]);
+        myGetJSON(config["redditscience"]);
+        myGetJSON(config["redditpics"]);
     });
 });    
 
