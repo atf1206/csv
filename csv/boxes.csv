@@ -31,7 +31,7 @@ indeed1,indeed1,jobs,results1,
 indeed2,indeed2,jobs,results2,
 
 // Box 2-3
-// var redditpics       = ['redditpics',        'entertain', 12, 'https://www.reddit.com/r/pics/', 'Reddit.com/r/pics' ];
-// var reddittil        = ['reddittil',         'entertain',  8, 'https://www.reddit.com/r/todayilearned/', 'Reddit.com/r/todayilearned' ];
-// var redditask        = ['redditask',         'entertain', 10, 'https://www.reddit.com/r/askreddit/', 'Reddit.com/r/askreddit' ];
-// var redditvid        = ['redditvideos',      'entertain', 10, 'https://www.reddit.com/r/videos/', 'Reddit.com/r/videos' ];
+redditpics,redditpics,entertain,12,https://www.reddit.com/r/pics/,Reddit.com/r/pics
+reddittil,reddittil,entertain,8,https://www.reddit.com/r/todayilearned/, 'Reddit.com/r/todayilearned
+redditask,redditask,entertain,10,https://www.reddit.com/r/askreddit/,Reddit.com/r/askreddit
+redditvid,redditvideos,entertain,10,https://www.reddit.com/r/videos/,Reddit.com/r/videos

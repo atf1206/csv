@@ -27,8 +27,7 @@ $(document).ready(function() {
         myGetJSON(config["redditscience"]);
         myGetJSON(config["redditpics"]);
     });
-});    
-
+});
 
 function processCSVConfig(csvContent) {
     lineArray = csvContent.split("\n")
@@ -41,7 +40,6 @@ function processCSVConfig(csvContent) {
     };
     config = config_dict
 };
-
 
 function processCSV(csvContent) {
     lineArray = csvContent.split("\n")
@@ -57,40 +55,39 @@ function processCSV(csvContent) {
     return html
 };
 
-
 $(document).ready(function () {
-	$('ul.tabs li').click(function() {
+    $('ul.tabs li').click(function() {
 
         //Get 'data-tab' value of clicked tab
-		var tab_id = $(this).attr('data-tab');
-		tab_id = config[tab_id];
+        var tab_id = $(this).attr('data-tab');
+        tab_id = config[tab_id];
 
         //Remove "current" class from all tabs in that box, add it back to just 1
-		$('ul.' +tab_id[1]+ ' li').removeClass('current');
-		$(this).addClass('current');
-		
-		if (tab_id[1] == "learn") {
-			$('.learntab').removeClass('current');
-			$("."+tab_id[0]).addClass('current');
-		}
+        $('ul.' +tab_id[1]+ ' li').removeClass('current');
+        $(this).addClass('current');
+
+        if (tab_id[1] == "learn") {
+            $('.learntab').removeClass('current');
+            $("."+tab_id[0]).addClass('current');
+        }
         else if (tab_id[1] == "courses") {
             $('.coursestab').removeClass('current');
             $("."+tab_id[0]).addClass('current');
         }
-		else if (tab_id[1] == "jobs") {
-			//$('.jobtab').removeClass('current');
-			//$("."+tab_id[0]).addClass('current');
-			myGetIndeed(tab_id);
-		}
-		else if (tab_id[0] == "nytimes") {
-			myGetNYTimes(tab_id);
-		}
-		else {
-			myGetJSON(tab_id);
-		}
-	});
+        else if (tab_id[1] == "jobs") {
+            //$('.jobtab').removeClass('current');
+            //$("."+tab_id[0]).addClass('current');
+            myGetIndeed(tab_id);
+        }
+        else if (tab_id[0] == "nytimes") {
+            myGetNYTimes(tab_id);
+        }
+        else {
+            myGetJSON(tab_id);
+        }
+    });
 });
-	
+
 function myGetJSON(sourceArray) {
     if(sourceArray[0]=='hackernews') {
         var j = 1;
@@ -109,7 +106,6 @@ function myGetJSON(sourceArray) {
         $.getJSON(
             sourceArray[3] + ".json?limitToFirst=5", //jsonp=?
             function parseJSON(data) {
-                //console.log("getting");
                 $("." +sourceArray[1]+ "content").empty();
                 $.each(data.data.children.slice(0, sourceArray[2]), function (i, post) {
                     $("." +sourceArray[1]+ "content").append("<a href='http://www.reddit.com" +post.data.permalink+ "' rel='nofollow'><img src='graphics/cam.gif' border='0'></a>&nbsp; <a href='" +post.data.url+ "' rel='nofollow' class='bl'>" +post.data.title+ "</a><br>");
