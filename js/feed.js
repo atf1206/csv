@@ -21,6 +21,7 @@ function loadBoxFromCSV(config_list) {
     })
     .done(function(res) {
         var html = processCSV(res);
+        console.log("getting for " +  config_list[0] + ", " + config_list[1]);
         $("." + config_list[0]).append(html);
     });
 };
