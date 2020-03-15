@@ -13,6 +13,18 @@ $(document).ready(function() {
     });
 });
 
+function loadBoxFromCSV(config_list) {
+    $.ajax({
+        type: "GET",
+        url: "csv/" + config_list[1] + ".csv",
+        dataType: "text",
+    })
+    .done(function(res) {
+        var html = processCSV(res);
+        $("." + config_list[0]).append(html);
+    });
+};
+
 $(document).ready(function() {
     $.ajax({
         type: "GET",
@@ -20,7 +32,9 @@ $(document).ready(function() {
         dataType: "text",
     })
     .done(function(res) {
-        processCSVConfig(res);
+        config = processCSVConfig(res);
+        loadBoxFromCSV(config["Courses"]);
+        loadBoxFromCSV(config["Coursera"]);
         myGetNYTimes(config["nytimes"]);
         myGetIndeed(config["indeed1"]);
         myGetJSON(config["redditprog"]);
@@ -32,13 +46,13 @@ $(document).ready(function() {
 function processCSVConfig(csvContent) {
     lineArray = csvContent.split("\n")
     var config_dict = {};
-    for (var i=0, n=lineArray.length; i < n; i++){
+    for (var i=0, n=lineArray.length; i < n; i++) {
         if (lineArray[i] && (lineArray[i].substring(0,2) != "//")) {
             var line = lineArray[i].split(",");
             config_dict[line[0]] = line.slice(1)
         };
     };
-    config = config_dict
+    return config_dict
 };
 
 function processCSV(csvContent) {

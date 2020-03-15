@@ -1,6 +1,6 @@
 // Box 0 - courses from csv
 Courses,coursescontent,courses,,
-Coursera,courseracontent,courses,,
+Coursera,courseracontent,coursera,,
 
 // Box 1-1 - news
 nytimes,nytimes,news,10,http://www.nytimes.com,NYTimes.com
