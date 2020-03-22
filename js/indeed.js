@@ -1,4 +1,5 @@
-function myGetIndeed(sourceArray) {
+
+function getIndeed(sourceArray) {
     var url = "https://indeedpassthrough.herokuapp.com/indeed";
     $.ajax({
         url: url,

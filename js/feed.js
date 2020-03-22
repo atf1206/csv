@@ -1,28 +1,28 @@
 
 var config = {}
 
-$(document).ready(function() {
-    $.ajax({
-        type: "GET",
-        url: "csv/courses.csv",
-        dataType: "text",
-    })
-    .done(function(res) {
-        var html = processCSV(res);
-        $(".coursescontent").append(html);
-    });
-});
+// $(document).ready(function() {
+//     $.ajax({
+//         type: "GET",
+//         url: "csv/courses.csv",
+//         dataType: "text",
+//     })
+//     .done(function(res) {
+//         var html = processCSV(res);
+//         $(".coursescontent").append(html);
+//     });
+// });
 
-function loadBoxFromCSV(config_list) {
+function loadBoxFromCSV(csvName, config_list) {
     $.ajax({
         type: "GET",
-        url: "csv/" + config_list[1] + ".csv",
+        url: "csv/" + csvName + ".csv",
         dataType: "text",
     })
     .done(function(res) {
         var html = processCSV(res);
-        console.log("getting for " +  config_list[0] + ", " + config_list[1]);
-        $("." + config_list[0]).append(html);
+        // console.log("getting for " +  config_list[0] + ", " + config_list[1]);
+        $("." + config_list[0]).html(html);
     });
 };
 
@@ -34,10 +34,10 @@ $(document).ready(function() {
     })
     .done(function(res) {
         config = processCSVConfig(res);
-        loadBoxFromCSV(config["Courses"]);
-        loadBoxFromCSV(config["Coursera"]);
-        myGetNYTimes(config["nytimes"]);
-        myGetIndeed(config["indeed1"]);
+        loadBoxFromCSV("Courses", config["Courses"]);
+        loadBoxFromCSV("Coursera", config["Coursera"]);
+        getNYTimes(config["nytimes"]);
+        getIndeed(config["indeed1"]);
         myGetJSON(config["redditprog"]);
         myGetJSON(config["redditscience"]);
         myGetJSON(config["redditpics"]);
@@ -145,18 +145,19 @@ function hackerAppend(sourceArray, post, j) {
     );
 };
 
-function myGetNYTimes(sourceArray) {
+function getNYTimes(sourceArray) {
     var url = "https://api.nytimes.com/svc/topstories/v2/home.json";
     url += '?' + $.param({
-        'api-key': "3b20fe86a1714372960f3048fe35b399",
-        'limitToFirst': 10
+        'api-key': "Z2ljnFm9tZufjHiddAW6NrGNhUNSyoVC",
+        // 'num_results': 10 // no longer works! default is 55
     });
     $.ajax({
         url: url,
         method: 'GET',
-        //dataType: 'jsonp'
+        // dataType: 'jsonp'
     })
     .done(function(result) {
+        console.log(result);
         $("." +sourceArray[1]+ "content").empty();
         for (var i = 0; i < sourceArray[2]; i++) {
             $("." +sourceArray[1]+ "content").append("<a href='" +result["results"][i]["url"]+ "' rel='nofollow'><img src='graphics/cam.gif' border='0'></a>&nbsp; <a href='" +result["results"][i]["url"]+ "' rel='nofollow' class='bl'>" +result["results"][i]["title"]+ "</a><br>");

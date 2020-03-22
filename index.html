@@ -23,16 +23,16 @@
   <div class="categories">
     <span id="tn">Courses</span>
     <ul class="tabs courses">
-      <li class="tab-link current" data-tab="Courses"><img src="graphics/ico-nyt.gif"></img>Classes</li>
+      <li class="tab-link current" data-tab="Courses"><img src="graphics/study.png" height="16" width="16" ;></img>Classes</li>
       <li class="tab-link" data-tab="Coursera"><img src="graphics/reddit.gif"></img>Coursera</li>
-      <li class="tab-link" data-tab="unknown"><img src="graphics/reddit.gif"></img>Classes 3</li>
+      <li class="tab-link" data-tab="Unknown"><img src="graphics/reddit.gif"></img>Classes 3</li>
     </ul>
   </div>
   <!-- Content -->
   <div class="parsedcontent niceborder" style="min-height: 100px;">
     <div class="coursescontent coursestab tab-content current"></div>
     <div class="courseracontent coursestab tab-content">
-      <!-- Pre-loaded content (aka placeholder) -- keep for now -->
+      <!-- Pre-loaded content (aka placeholder) -- normally will be overwritten -->
       &nbsp;&nbsp;
       <a href="http://www.dataquest.io/" rel="nofollow" class="bl">Dataquest</a><br>
       <div class="divider"></div>
@@ -130,13 +130,9 @@
   <div id="newscontent" class="parsedcontent niceborder" style="height:130px;">
 
     <div class="learntab learncode tab-content current">
-      &nbsp;&nbsp;<a href="http://www.codecademy.com/" rel="nofollow" class="bl">Codecademy</a><br>
-      <div class="divider"></div> 
-      &nbsp;&nbsp;<a href="http://www.codeschool.com" rel="nofollow" class="bl">Code School</a><br>
-      <div class="divider"></div>
       &nbsp;&nbsp;<a href="https://www.freecodecamp.com/" rel="nofollow" class="bl">Free Code Camp</a>
-      <br><div class="divider"></div>
-      &nbsp;&nbsp;<a href="https://www.coursera.org/" rel="nofollow" class="bl">Coursera</a><br>
+      <div class="divider"></div>
+      &nbsp;&nbsp;<a href="http://www.codeschool.com" rel="nofollow" class="bl">Code School</a><br>
       <div class="divider"></div>
       &nbsp;&nbsp;<a href="http://htmldog.com/guides/javascript/" rel="nofollow" class="bl">htmldog.com Javascript Guide</a><br>
       <div class="divider"></div>
@@ -183,6 +179,25 @@
     </div>
   </div>
 
+ <!-- Box 2-3 - Entertainment -->
+ <!-- Tabs -->
+  <div class="categories">
+    <span id="tn">Entertainment</span>
+    <ul class="tabs entertain">
+      <li class="tab-link current" data-tab="redditpics"><img src="graphics/reddit.gif"></img>Pics</li>
+      <li class="tab-link" data-tab="reddittil"><img src="graphics/reddit.gif"></img>TIL</li>
+      <li class="tab-link" data-tab="redditask"><img src="graphics/reddit.gif"></img>Ask</li>
+      <li class="tab-link" data-tab="redditvid"><img src="graphics/reddit.gif"></img>Videos</li>
+    </ul>
+  </div>
+  <!-- Content -->
+  <div class="parsedcontent niceborder">
+    <div class="entertaincontent tab-content current">
+      <a href="#" rel="nofollow"><img src="graphics/cm.gif" border="0"></a>&nbsp;
+      <a href="http://imgur.com/B361u9E" rel="nofollow" class="bl">So this is what happens at E3 I guess</a><br>
+      <div class="divider"></div>
+    </div>
+  </div>
   
  <!-- Box 2-2 - Indeed -->
  <!-- Tabs -->
@@ -208,26 +223,6 @@
     </div>
   </div>
 
- <!-- Box 2-3 - Videos -->
- <!-- Tabs -->
-  <div class="categories">
-    <span id="tn">Entertainment</span>
-    <ul class="tabs entertain">
-      <li class="tab-link current" data-tab="redditpics"><img src="graphics/reddit.gif"></img>Pics</li>
-      <li class="tab-link" data-tab="reddittil"><img src="graphics/reddit.gif"></img>TIL</li>
-      <li class="tab-link" data-tab="redditask"><img src="graphics/reddit.gif"></img>Ask</li>
-      <li class="tab-link" data-tab="redditvideos"><img src="graphics/reddit.gif"></img>Videos</li>
-    </ul>
-  </div>
-  <!-- Content -->
-  <div class="parsedcontent niceborder">
-    <div class="entertaincontent tab-content current">
-      <a href="#" rel="nofollow"><img src="graphics/cm.gif" border="0"></a>&nbsp;
-      <a href="http://imgur.com/B361u9E" rel="nofollow" class="bl">So this is what happens at E3 I guess</a><br>
-      <div class="divider"></div>
-    </div>
-  </div>
-
 <!-- end Col 2 -->
 </div>
 <!-- end wrap -->
@@ -236,9 +231,10 @@
 
 <!-- About =========================================== -->
 <div class="about">
-  <div class="parsedcontent niceborder" style="margin: 5px 30px 20px 30px;">
-    <div class="categ" style="font-size:15px;">About</div>
-    This website collects up-to-date feeds from various news sites (mostly from Reddit.com for now). Feeds are loaded on demand.<br><br>
+  <br>
+  <div class="parsedcontent niceborder" style="border: solid;padding: 15px 40px;">
+    <div class="categ" style="font-size:15px;"><strong>About</strong></div>
+    <p>This website collects feeds from various news sites. Feeds are loaded on demand.</p>
     Andrew Fritz, 2016-2020
   </div>
 </div>

@@ -1,6 +1,7 @@
 // Box 0 - courses from csv
 Courses,coursescontent,courses,,
-Coursera,courseracontent,coursera,,
+Coursera,courseracontent,courses,,
+Unknown,none,courses,,
 
 // Box 1-1 - news
 nytimes,nytimes,news,10,http://www.nytimes.com,NYTimes.com
@@ -10,10 +11,10 @@ redditworld,redditworld,news,8,https://www.reddit.com/r/worldnews/,Reddit.com/r/
 reddittech,reddittech,news,8,https://www.reddit.com/r/technology/,Reddit.com/r/tech
 
 // Box 1-2 - code
-redditprog,redditprogramming,code,10,https://www.reddit.com/r/programming/,Reddit.com/r/programming
-redditwebdev,redditwebdev,code,10,https://www.reddit.com/r/developer/,Reddit.com/r/developer
-hackernews,hackernews,code,10,https://hacker-news.firebaseio.com/v0/topstories,https://hacker-news.firebaseio.com/v0/item/,http://news.ycombinator.com/,Hacker News
-redditcoding,redditcoding,code,10,https://www.reddit.com/r/coding/,Reddit.com/r/coding
+redditprog,redditprogramming,code,11,https://www.reddit.com/r/programming/,Reddit.com/r/programming
+redditwebdev,redditwebdev,code,11,https://www.reddit.com/r/developer/,Reddit.com/r/developer
+hackernews,hackernews,code,11,https://hacker-news.firebaseio.com/v0/topstories,https://hacker-news.firebaseio.com/v0/item/,http://news.ycombinator.com/,Hacker News
+redditcoding,redditcoding,code,11,https://www.reddit.com/r/coding/,Reddit.com/r/coding
 
 // Box 1-3 - science
 redditscience,redditscience,science,6,https://www.reddit.com/r/science/,Reddit.com/r/science
